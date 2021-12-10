@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>headlink}}
+    <title>Login Page</title>
+</head>
+<body>
+        {{>nav}}
+                <form action="/login" method="POST">
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-md-2">Email</label>
+              <div class="col-md-3">
+                <input type="text" name="email" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Password</label>
+              <div class="col-md-3">
+                <input type="password" name="password" class="form-control" />
+                <br />
+                <br />
+                <input type="submit" value="SUBMIT" class="btn btn-primary" />&nbsp; &nbsp; <a href="/register" class="btn btn-primary">Register</a>
+
+              </div>
+            </div>
+          </div>
+        </form>
+</body>
+</html>

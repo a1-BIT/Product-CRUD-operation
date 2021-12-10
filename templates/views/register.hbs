@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>headlink}}
+    <title>Registeration Page</title>
+</head>
+
+<body>
+    {{>nav}}
+    <form action="/register" method="POST">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-md-2">Fullname</label>
+                <div class="col-md-3">
+                    <input required type="text" name="fullname" class="form-control" autocomplete="off"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Email</label>
+                <div class="col-md-3">
+                    <input required type="text" name="email" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Mobile</label>
+                <div class="col-md-3">
+                    <input required type="text" name="mobile" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">User Type</label>
+                <div class="col-md-3">
+                    <select name="user_type" class="form-control">
+                        <option value="1">Admin</option>
+                        <option value="0">User</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">Password</label>
+                <div class="col-md-3">
+                    <input required type="text" name="password" class="form-control" />
+                    <br />
+                    <br />
+                    <input type="submit" value="SUBMIT" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </form>
+    {{>bootjs}}
+</body>
+
+</html>

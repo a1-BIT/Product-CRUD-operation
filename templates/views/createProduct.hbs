@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>headlink}}
+    <title>Add product</title>
+</head>
+<body>
+        <div class="container body-content" >
+        <br />
+        <h2>Add New Product</h2>
+        <hr />
+        <form action="/createProduct" method="POST">
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-md-2">Product Id</label>
+              <div class="col-md-3">
+                <input required type="text" name="productId" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Product Brand</label>
+              <div class="col-md-3">
+                <input required type="text"  name="brandName"  class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Product Name</label>
+              <div class="col-md-3">
+                <input required type="text"  name="productName" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2">Product Description</label>
+              <div class="col-md-3">
+                <input required type="text" name="productDesc" class="form-control" />
+              </div>
+            </div>
+            <div class="form-group">     
+              <div class="col-md-2">
+              </div>
+              <input required type="submit" value="SUBMIT" class="btn btn-primary" />
+            </div>
+          </div>
+        </form>
+        <br />
+        <hr />
+        <footer>
+          &copy; Admin
+        </footer>
+    </div>
+</body>
+</html>

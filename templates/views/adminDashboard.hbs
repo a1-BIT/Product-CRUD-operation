@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>headlink}}
+    <title>Admin Dashboard</title>
+</head>
+<body>
+            <div class="container body-content" ng-controller="myController">
+      <br />
+      <a href="/" class="btn btn-primary">Logout</a> 
+        <table class="table">
+
+      <div>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Brand</th>
+                <th>Product Name</th>
+                <th>Product Desc</th>
+                <th>Status</th>
+                <th>Action</th>
+
+
+ 
+            </tr>
+            <tr ng-repeat="product in products">
+                <td>{{product.pid}}</td>
+                <td>{{product.product_name}}</td>
+                <td>{{product.product_brand}}</td>
+                <td>{{product.product_description}}</td>
+                <td>{{product.is_approved}}</td>
+                <td>
+
+                    <a href="/approve_product/{{product._id}}" class="btn btn-success">Approve Product</a>
+                </td>
+            </tr>
+      </div>
+        </table>
+        <br />
+        <hr />
+        <footer>
+          &copy; Admin
+        </footer>
+        <script>
+            var products = <%- JSON.stringify(products_data) %>;
+            console.log(products);
+        </script>
+        <script src="static/app.js"></script>
+    </div>
+</body>
+</html>

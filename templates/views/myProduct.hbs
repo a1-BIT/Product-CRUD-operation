@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>headlink}}
+    <title>My Products</title>
+</head>
+
+<body>
+    <div class="container body-content" ng-controller="myController">
+        <br />
+        <a href="/" class="btn btn-primary">Logout</a>&nbsp;&nbsp;<a href="/createProduct" class="btn btn-primary">Add
+            New
+            Product</a>
+        <br />
+        <br />
+        <br />
+        <table class="table">
+
+            <div>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Brand</th>
+                    <th>Product Name</th>
+                    <th>Product Desc</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <tr>{{productList}}</tr>
+            </div>
+        </table>
+        <br />
+        <hr />
+        <footer>
+            &copy; Admin
+        </footer>
+        <script>
+        </script>
+        <script src="static/app.js"></script>
+    </div>
+</body>
+
+</html>
